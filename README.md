@@ -7,3 +7,4 @@ inherent challenges, we present the Residual Dense Swin Transformer Network (RDS
 It comprises a linear embedding module for feature enhancement, an encoder with shifted-window attention for modeling non-locality, and an MLP decoder for continuous detail reconstruction. 
 This strategy streamlines balancing image quality and field-of-view, which offers superior textures over traditional methods. Experimentally, RDSTN outperforms existing approaches while requiring 
 fewer parameters. In conclusion, RDSTN shows promising potential for ultrasound image enhancement by overcoming the limitations of conventional interpolation-based methods and achieving depth-independent imaging._
+![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%202.pdf)
