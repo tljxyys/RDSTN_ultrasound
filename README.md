@@ -38,6 +38,8 @@ TensorboardX, yaml, numpy, tqdm, imageio
 ![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%203.png)
 <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1215.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1220.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1222.gif" onload="this.onload=null;this.play();" />
 
+The figures above are all gif file and will only play once. if you want to see the gif effect, please refresh the page.
+
 ## Bibtex
 ```
 @INPROCEEDINGS{10447712,
