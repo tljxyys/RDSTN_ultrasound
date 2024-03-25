@@ -34,6 +34,8 @@ pip install opencv-python==4.4.0.46 termcolor==1.1.0 yacs==0.1.8 pyyaml scipy
 TensorboardX, yaml, numpy, tqdm, imageio
 ```
 ***
+## Results
+![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%301.png)
 
 ## Bibtex
 ```
