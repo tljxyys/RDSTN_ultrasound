@@ -9,5 +9,25 @@ This strategy streamlines balancing image quality and field-of-view, which offer
 fewer parameters. In conclusion, RDSTN shows promising potential for ultrasound image enhancement by overcoming the limitations of conventional interpolation-based methods and achieving depth-independent imaging._
 >
 ![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%201.png)
+***
+![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%202.png)
+***
+## Dependencies and Installation
+* Clone this repo:
+```
 
-![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%201.png)
+```
+
+## Bibtex
+```
+@INPROCEEDINGS{10447712,
+  author={Hu, Jintong and Che, Hui and Li, Zishuo and Yang, Wenming},
+  booktitle={ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Residual Dense Swin Transformer for Continuous Depth-Independent Ultrasound Imaging}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={2280-2284},
+  keywords={Image quality;Visualization;Ultrasonic imaging;Superresolution;Imaging;Streaming media;Transformers;Ultrasound imaging;Arbitrary-scale image super-resolution;Depth-independent imaging;Non-local implicit representation},
+  doi={10.1109/ICASSP48485.2024.10447712}}
+```
