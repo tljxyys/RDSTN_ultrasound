@@ -35,7 +35,7 @@ TensorboardX, yaml, numpy, tqdm, imageio
 ```
 ***
 ## Results
-![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%301.png)
+![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%203.png)
 
 ## Bibtex
 ```
