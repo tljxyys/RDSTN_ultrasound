@@ -15,8 +15,25 @@ fewer parameters. In conclusion, RDSTN shows promising potential for ultrasound 
 ## Dependencies and Installation
 * Clone this repo:
 ```
-
+https://github.com/tljxyys/RDSTN_ultrasound.git
+cd RDSTN_ultrasound
 ```
+* Create a conda virtual environment and activate:
+```
+conda create -n rdstn python=3.7 -y
+conda activate rdstn
+```
+* install necessary packages:
+```
+conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=10.2 -c pytorch
+pip install timm==0.4.12
+pip install opencv-python==4.4.0.46 termcolor==1.1.0 yacs==0.1.8 pyyaml scipy
+```
+* Other requirements:
+```
+TensorboardX, yaml, numpy, tqdm, imageio
+```
+***
 
 ## Bibtex
 ```
