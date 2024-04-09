@@ -75,9 +75,9 @@ python test.py --config test/MICCAI_ultrasound/breast/test-x1.6.yaml --model sav
 
 
 
-![1215](https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/0006250a-ffc3-4c1a-85dd-2f323f57079a)
-![1220](https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/b2c5e423-56ff-4382-9955-ce1e9f87242d)
-![1222](https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/2937e45e-c65b-4d3d-93b8-e14e003f869e)
+https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/0006250a-ffc3-4c1a-85dd-2f323f57079a
+https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/b2c5e423-56ff-4382-9955-ce1e9f87242d
+https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/2937e45e-c65b-4d3d-93b8-e14e003f869e
 
 ## Bibtex
 ```
