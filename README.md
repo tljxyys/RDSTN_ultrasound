@@ -73,6 +73,12 @@ python test.py --config test/MICCAI_ultrasound/breast/test-x1.6.yaml --model sav
 | S3 | ✔️ | ✖️ | 48.89 | 46.40 | 44.61 | 42.94 | 41.46 | 36.23 | 33.13 | 29.59 | 27.50 | 26.14 |
 | S4 | ✔️ | ✔️ | **49.27** | **46.62** | **44.78** | **43.10** | **41.62** | **36.34** | **33.20** | **29.64** | **27.54** | **26.18** | 
 
+```HTML
+<video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+</video>
+```
+
 <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1215.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1220.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1222.gif" onload="this.onload=null;this.play();" />
 
 The figures above are all gif file and will only play once. if you want to see the gif effect, please refresh the page.
