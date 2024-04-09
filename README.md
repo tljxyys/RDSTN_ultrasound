@@ -1,5 +1,6 @@
-# Residual Dense Swin Transformer for Continuous Depth-Independent Ultrasound Imaging🏥 (ICASSP2024)
-[![](https://img.shields.io/badge/Project-Page-green.svg)](https://github.com/tljxyys/RDSTN_ultrasound) [![](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2403.16384) [![](https://img.shields.io/badge/Dataset-🔰BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)
+# Residual Dense Swin Transformer for Continuous Depth-Independent Ultrasound Imaging🚀 (ICASSP2024)
+[![](https://img.shields.io/badge/Project-Page-green.svg)](https://github.com/tljxyys/RDSTN_ultrasound) [![](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2403.16384) [![](https://img.shields.io/badge/Dataset-🔰BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) [![](https://img.shields.io/badge/Dataset-🔰USenhance-blue.svg)](https://ultrasoundenhance2023.grand-challenge.org/) 
+
 ***
 >**Abstract**: _Ultrasound imaging is crucial for evaluating organ morphology and function, yet depth adjustment can degrade image quality and field-of-view, presenting a depth-dependent dilemma. 
 Traditional interpolation-based zoom-in techniques often sacrifice detail and introduce artifacts. Motivated by the potential of arbitrary-scale super-resolution to naturally address these 
@@ -43,12 +44,26 @@ TensorboardX, yaml, numpy, tqdm, imageio
 ***
 
 ## 3. Data Preparation
+- The BUSI dataset we used are provided by Al-Dhabyani W, Gomaa M, Khaled H, Fahmy A. [![](https://img.shields.io/badge/Dataset-🔰BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset). If you would like to use the preprocessed data, please use it for research purposes and do not redistribute it. The USenhance dataset can be obtained from [![](https://img.shields.io/badge/Dataset-🔰USenhance-blue.svg)](https://ultrasoundenhance2023.grand-challenge.org/).
+- Please follow the instructions and regulations set by the official releaser of these two datasets. 
 
+## 4. Training/Testing
+- Training. Run the train script on BUSI dataset. The batch size and epoch we used is 16 and 1000, respectively.
+```
+python train.py --config train/BUSI/train_rdn-liif.yaml
+```
+- Testing. Achieving 1.6x to 10x super-resolution on BUSI dataset or USenhance data.
+```
+python test.py --config test/BUSI/test-x1.6.yaml --model save/_train_rdn-liif/epoch-last.pth
+```
+```
+python test.py --config test/MICCAI_ultrasound/breast/test-x1.6.yaml --model save/_train_rdn-liif/epoch-last.pth
+```
 
-## Results
+## 5. Results
+
 ![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%203.png)
 <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1215.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1220.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1222.gif" onload="this.onload=null;this.play();" />
-
 The figures above are all gif file and will only play once. if you want to see the gif effect, please refresh the page.
 
 ## Bibtex
