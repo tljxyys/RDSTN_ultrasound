@@ -1,5 +1,5 @@
 # Residual Dense Swin Transformer for Continuous Depth-Independent Ultrasound Imaging (ICASSP2024)
-[paper](https://ieeexplore.ieee.org/document/10447712) | [code](https://github.com/tljxyys/RDSTN_ultrasound)
+[![](https://img.shields.io/badge/Project-Page-green.svg)](https://github.com/tljxyys/RDSTN_ultrasound) [![](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2403.16384) [![](https://img.shields.io/badge/Dataset-BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset)
 ***
 >**Abstract**: _Ultrasound imaging is crucial for evaluating organ morphology and function, yet depth adjustment can degrade image quality and field-of-view, presenting a depth-dependent dilemma. 
 Traditional interpolation-based zoom-in techniques often sacrifice detail and introduce artifacts. Motivated by the potential of arbitrary-scale super-resolution to naturally address these 
@@ -8,10 +8,14 @@ It comprises a linear embedding module for feature enhancement, an encoder with 
 This strategy streamlines balancing image quality and field-of-view, which offers superior textures over traditional methods. Experimentally, RDSTN outperforms existing approaches while requiring 
 fewer parameters. In conclusion, RDSTN shows promising potential for ultrasound image enhancement by overcoming the limitations of conventional interpolation-based methods and achieving depth-independent imaging._
 >
-![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%201.png)
-***
+
 ![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%202.png)
 ***
+
+## 1. Background
+![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%201.png)
+***
+
 ## Dependencies and Installation
 * Clone this repo:
 ```
