@@ -73,11 +73,8 @@ python test.py --config test/MICCAI_ultrasound/breast/test-x1.6.yaml --model sav
 | S3 | ✔️ | ✖️ | 48.89 | 46.40 | 44.61 | 42.94 | 41.46 | 36.23 | 33.13 | 29.59 | 27.50 | 26.14 |
 | S4 | ✔️ | ✔️ | **49.27** | **46.62** | **44.78** | **43.10** | **41.62** | **36.34** | **33.20** | **29.64** | **27.54** | **26.18** | 
 
+![1222](https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/8b9cf29d-8e6a-489a-bccc-df0246f6031b)
 
-
-https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/0006250a-ffc3-4c1a-85dd-2f323f57079a
-https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/b2c5e423-56ff-4382-9955-ce1e9f87242d
-https://github.com/tljxyys/RDSTN_ultrasound/assets/57203330/2937e45e-c65b-4d3d-93b8-e14e003f869e
 
 ## Bibtex
 ```
