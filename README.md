@@ -75,7 +75,7 @@ python test.py --config test/MICCAI_ultrasound/breast/test-x1.6.yaml --model sav
 
 ```HTML
 <video width="320" height="240" controls>
-    <source src="movie.mp4" type="video/mp4">
+    <source src="1222.mp4" type="video/mp4">
 </video>
 ```
 
