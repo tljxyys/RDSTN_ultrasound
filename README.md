@@ -17,7 +17,6 @@ fewer parameters. In conclusion, RDSTN shows promising potential for ultrasound 
 Ultrasound imaging serves as a pivotal tool in medical diagnostics for its non-invasive nature and real-time imaging capabilities, allowing visualization of superficial and deep structures. However, adjusting the imaging depth presents challenges that impact image quality and field-of-view. Modifying the imaging depth in ultrasound requires altering the echo reception time. Longer reception times, necessary for deeper imaging, tend to lower the frame rate, subsequently reducing temporal resolution. A shallow imaging depth, however, may lead to interference from adjacent echo signals, compromising image quality. Therefore, selecting the appropriate depth threshold is crucial. Traditionally, zoom-in operations utilizing interpolation have been employed to counterbalance unsatisfactory image quality during depth adjustments. This often results in the loss of intricate details and the emergence of aliasing artifacts. Addressing this challenge, our study presents the arbitrary-scale super-resolution (ASSR) as a cutting-edge approach that offers an effective solution within the desired depth threshold.
 
 ![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%201.png)
-***
 
 ## 2. Dependencies and Installation
 
@@ -44,8 +43,7 @@ TensorboardX, yaml, numpy, tqdm, imageio
 ***
 
 ## 3. Data Preparation
-- The BUSI dataset we used are provided by Al-Dhabyani W, Gomaa M, Khaled H, Fahmy A. [![](https://img.shields.io/badge/Dataset-🔰BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset). If you would like to use the preprocessed data, please use it for research purposes and do not redistribute it. The USenhance dataset can be obtained from [![](https://img.shields.io/badge/Dataset-🔰USenhance-blue.svg)](https://ultrasoundenhance2023.grand-challenge.org/).
-- Please follow the instructions and regulations set by the official releaser of these two datasets. 
+- The BUSI dataset we used are provided by Al-Dhabyani W, Gomaa M, Khaled H, Fahmy A, which can be downloaded from [![](https://img.shields.io/badge/Dataset-🔰BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset). If you would like to use the preprocessed data, please use it for research purposes and do not redistribute it. The USenhance dataset can be obtained from [![](https://img.shields.io/badge/Dataset-🔰USenhance-blue.svg)](https://ultrasoundenhance2023.grand-challenge.org/). Please follow the instructions and regulations set by the official releaser of these two datasets. 
 
 ## 4. Training/Testing
 - Training. Run the train script on BUSI dataset. The batch size and epoch we used is 16 and 1000, respectively.
@@ -62,7 +60,26 @@ python test.py --config test/MICCAI_ultrasound/breast/test-x1.6.yaml --model sav
 
 ## 5. Results
 
-![image](https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/Figure%203.png)
+- **Quantitative comparison in terms of PSNR(dB).** The evaluation is performed on the BUSI testing set. The models are trained with continuous scale sampled from U(1, 4). Best result of each scale is in **bold**.
+
+| Methods | Num. of Parameters | ×1.6 | ×1.7 | ×1.8 | ×1.9 | ×2 | ×3 | ×4 | ×6 | ×8 | ×10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Bicubic | – | 40.21 | 39.36 | 38.88 | 38.21 | 38.68 | 33.17 | 30.40 | 26.88 | 24.86 | 23.64 |
+| EDSR-LIIF | 496.4K | 43.92 | 43.06 | 42.26 | 41.50 | 40.80 | 35.80 | 32.87 | 29.42 | 27.34 | 26.04 |
+| RDN-LIIF | 5.8M | 44.71 | 43.81 | 43.03 | 42.28 | 41.57 | **36.36** | **33.22** | 29.58 | 27.46 | 26.12 | 
+| Unet | 31.4M | 42.39 | 41.71 | 41.05 | 40.42 | 39.83 | 35.24 | 32.55 | 29.20 | 27.16 | 25.91 |
+| Resnet50 | 4.1M | 42.86 | 42.07 | 41.35 | 40.62 | 39.95 | 35.17 | 32.46 | 29.12 | 27.11 | 25.87 |
+| **RDSTN (ours)** | 3.2M | **44.78** | **43.89** | **43.10** | **42.35** | **41.62** | 36.34 | 33.20 | **29.64** | **27.54** | **26.18** |
+
+- **Ablation study of RDSTN on Local Feature Fusion (LFF) and Global Feature Fusion (GFF).** The evaluation is performed on the BUSI testing set, with a focus on measuring the peak signal-to-noise ratio (PSNR(dB)) to assess the performance of these strategies. The best result of each scale is in **bold**.
+
+| Methods | LFF | GFF | ×1.2 | ×1.4 | ×1.6 | ×1.8 | ×2 | ×3 | ×4 | ×6 | ×8 | ×10 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| S1 | ✖️ | ✖️ | 48.65 | 46.17 | 44.36 | 42.69 | 41.21 | 36.04 | 33.01 | 29.51 | 27.42 | 26.07 |
+| S2 | ✖️ | ✔️ | 48.71 | 46.23 | 44.42 | 42.73 | 41.27 | 36.07 | 33.03 | 29.54 | 27.46 | 26.11 |
+| S3 | ✔️ | ✖️ | 48.89 | 46.40 | 44.61 | 42.94 | 41.46 | 36.23 | 33.13 | 29.59 | 27.50 | 26.14 |
+| S4 | ✔️ | ✔️ | **49.27** | **46.62** | **44.78** | **43.10** | **41.62** | **36.34** | **33.20** | **29.64** | **27.54** | **26.18** | 
+
 <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1215.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1220.gif" onload="this.onload=null;this.play();" /> <img src="https://github.com/tljxyys/RDSTN_ultrasound/blob/main/fig/1222.gif" onload="this.onload=null;this.play();" />
 The figures above are all gif file and will only play once. if you want to see the gif effect, please refresh the page.
 
