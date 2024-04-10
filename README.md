@@ -1,5 +1,6 @@
 # Residual Dense Swin Transformer for Continuous Depth-Independent Ultrasound Imaging🚀 (ICASSP2024)
-[![](https://img.shields.io/badge/Project-Page-green.svg)](https://github.com/tljxyys/RDSTN_ultrasound) [![](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2403.16384) [![](https://img.shields.io/badge/Dataset-🔰BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) [![](https://img.shields.io/badge/Dataset-🔰USenhance-blue.svg)](https://ultrasoundenhance2023.grand-challenge.org/) 
+[![](https://img.shields.io/badge/Project-Page-green.svg)](https://github.com/tljxyys/RDSTN_ultrasound) [![](https://img.shields.io/badge/Paper-ArXiv-red.svg)](https://arxiv.org/abs/2403.16384) [![](https://img.shields.io/badge/Poster-🎇ICASSP-yellow.svg)](https://sigport.org/documents/residual-dense-swin-transformer-continuous-depth-independent-ultrasound-imaging) [![](https://img.shields.io/badge/Dataset-🔰BUSI-blue.svg)](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) [![](https://img.shields.io/badge/Dataset-🔰USenhance-blue.svg)](https://ultrasoundenhance2023.grand-challenge.org/) 
+
 
 ***
 >**Abstract**: _Ultrasound imaging is crucial for evaluating organ morphology and function, yet depth adjustment can degrade image quality and field-of-view, presenting a depth-dependent dilemma. 
